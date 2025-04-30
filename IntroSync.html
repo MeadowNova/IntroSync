@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1A6B72">
+    <title>IntroSync - Quiet Strength for Social Success</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --teal: #1A6B72;
+            --lavender: #9D8EC7;
+            --blue: #1D3461;
+            --sand: #D9C5B2;
+            --green: #7A9E7E;
+            --coral: #F3A47C;
+            --charcoal: #2F3640;
+            --medium-gray: #707070;
+            --light-gray: #E5E5E5;
+            --off-white: #F8F8F8;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--charcoal);
+            background-color: var(--off-white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .bg-teal {
+            background-color: var(--teal);
+        }
+
+        .bg-lavender {
+            background-color: var(--lavender);
+        }
+
+        .bg-blue {
+            background-color: var(--blue);
+        }
+
+        .bg-sand {
+            background-color: var(--sand);
+        }
+
+        .bg-green {
+            background-color: var(--green);
+        }
+
+        .bg-coral {
+            background-color: var(--coral);
+        }
+
+        .text-teal {
+            color: var(--teal);
+        }
+
+        .text-lavender {
+            color: var(--lavender);
+        }
+
+        .text-blue {
+            color: var(--blue);
+        }
+
+        .text-sand {
+            color: var(--sand);
+        }
+
+        .text-green {
+            color: var(--green);
+        }
+
+        .text-coral {
+            color: var(--coral);
+        }
+
+        .border-teal {
+            border-color: var(--teal);
+        }
+
+        .btn-primary {
+            background-color: var(--teal);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(26, 107, 114, 0.15);
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: var(--teal);
+            border: 2px solid var(--teal);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--teal);
+            color: white;
+        }
+
+        .card {
+            border-radius: 1rem;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .feature-card {
+            border-radius: 1rem;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .testimonial-card {
+            border-radius: 1rem;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(157, 142, 199, 0.15) 0%, rgba(26, 107, 114, 0.15) 100%);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(217, 197, 178, 0.2) 0%, rgba(157, 142, 199, 0.2) 100%);
+        }
+
+        .energy-level {
+            height: 8px;
+            border-radius: 4px;
+            background-color: var(--light-gray);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .energy-level-fill {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, var(--teal) 0%, var(--lavender) 100%);
+        }
+
+        .time-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 80px;
+        }
+
+        .time-label {
+            font-size: 12px;
+            color: var(--medium-gray);
+            margin-top: 8px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .badge-success {
+            background-color: var(--green);
+            color: white;
+        }
+
+        .badge-warning {
+            background-color: var(--coral);
+            color: white;
+        }
+
+        .accordion-header {
+            cursor: pointer;
+            padding: 1.25rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+            border-radius: 0.5rem;
+        }
+
+        .accordion-header:hover {
+            background-color: rgba(0, 0, 0, 0.03);
+        }
+
+        .accordion-content {
+            padding: 0 1.25rem 1.25rem 1.25rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 1000px;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .accordion-item:last-child {
+            border-bottom: none;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: white;
+            color: var(--blue);
+            font-size: 1.25rem;
+            transition: all 0.3s ease;
+            margin: 0 0.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            color: var(--teal);
+        }
+
+        .waitlist-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        input[type="email"] {
+            flex-grow: 1;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--light-gray);
+            border-radius: 0.5rem 0 0 0.5rem;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input[type="email"]:focus {
+            outline: none;
+            border-color: var(--teal);
+            box-shadow: 0 0 0 3px rgba(26, 107, 114, 0.25);
+        }
+
+        .waitlist-btn {
+            background-color: var(--teal);
+            color: white;
+            border: none;
+            border-radius: 0 0.5rem 0.5rem 0;
+            padding: 0 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .waitlist-btn:hover {
+            background-color: #155a60;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 640px) {
+            /* General mobile adjustments */
+            body {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 2rem !important;
+                line-height: 1.2 !important;
+            }
+
+            h2 {
+                font-size: 1.75rem !important;
+                line-height: 1.3 !important;
+            }
+
+            h3 {
+                font-size: 1.25rem !important;
+            }
+
+            p {
+                font-size: 1rem !important;
+            }
+
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            section {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+
+            /* Improved touch targets */
+            button,
+            .btn-primary,
+            .btn-secondary,
+            a {
+                min-height: 44px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            /* Card adjustments */
+            .card,
+            .feature-card,
+            .testimonial-card {
+                padding: 1.25rem;
+            }
+
+            /* Form elements */
+            .waitlist-form {
+                flex-direction: column;
+            }
+
+            input[type="email"] {
+                border-radius: 0.5rem;
+                margin-bottom: 0.5rem;
+                height: 3rem;
+                font-size: 1rem;
+                width: 100%;
+            }
+
+            .waitlist-btn {
+                border-radius: 0.5rem;
+                width: 100%;
+                padding: 0.75rem 1rem;
+                height: 3rem;
+            }
+
+            /* Spacing adjustments */
+            .space-y-6 {
+                margin-bottom: 1.5rem;
+            }
+
+            .mb-8 {
+                margin-bottom: 1.5rem;
+            }
+
+            .mb-12 {
+                margin-bottom: 2rem;
+            }
+
+            .mb-16 {
+                margin-bottom: 2.5rem;
+            }
+
+            /* Footer adjustments */
+            footer .grid {
+                gap: 2rem;
+            }
+        }
+
+        /* Small mobile devices */
+        @media (max-width: 375px) {
+            body {
+                font-size: 15px;
+            }
+
+            h1 {
+                font-size: 1.75rem !important;
+            }
+
+            h2 {
+                font-size: 1.5rem !important;
+            }
+
+            .container {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+            }
+        }
+
+        /* X Logo (Twitter) */
+        .x-logo {
+            position: relative;
+            width: 1.5em;
+            height: 1.5em;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .x-logo::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='currentColor' d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        /* TikTok Logo */
+        .tiktok-logo {
+            position: relative;
+            width: 1.5em;
+            height: 1.5em;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tiktok-logo::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='currentColor' d='M9 4.5c2.691 2.202 5.89 1.554 7.5 1.5v3c-1.491.102-2.927-.135-4.5-1.5v7A6 6 0 1 1 6 9a6.003 6.003 0 0 1 3 .805V13.5c-.284-.11-.58-.23-.89-.29A3 3 0 1 0 12 15V4.5Z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="sticky top-0 bg-white z-50 shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-bold text-teal m-0">IntroSync</h1>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#features" class="text-gray-700 hover:text-teal transition">Features</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-teal transition">Stories</a>
+                <a href="#faq" class="text-gray-700 hover:text-teal transition">FAQ</a>
+                <a href="#waitlist" class="btn-primary">Join Waitlist</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile menu, hidden by default -->
+        <div id="mobile-menu" class="hidden bg-white md:hidden">
+            <div class="container mx-auto px-4 py-3 space-y-4">
+                <a href="#features" class="block text-gray-700 hover:text-teal transition py-2 text-lg">Features</a>
+                <a href="#testimonials" class="block text-gray-700 hover:text-teal transition py-2 text-lg">Stories</a>
+                <a href="#faq" class="block text-gray-700 hover:text-teal transition py-2 text-lg">FAQ</a>
+                <a href="#waitlist" class="block btn-primary w-full text-center mt-4 py-3">Join Waitlist</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-4 sm:mb-6 text-blue">
+                    <span class="font-normal">Quiet Strength</span> for Social Success
+                </h1>
+                <p class="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-gray-700">
+                    IntroSync helps introverts build meaningful connections, manage their energy, and navigate the social world—calmly, confidently, and on their own terms.
+                </p>
+                <div class="bg-white bg-opacity-80 backdrop-filter backdrop-blur-sm rounded-lg p-3 mb-6 sm:mb-8 inline-block text-sm text-teal font-semibold">
+                    <span class="inline-block px-2 py-1 bg-teal text-white rounded-full mr-2 animate-pulse">•</span>
+                    <span class="inline-block">Limited early access: Only 500 introverts invited to private beta</span>
+                </div>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#waitlist" class="btn-primary w-full sm:w-auto">Join the Waitlist</a>
+                    <a href="#features" class="btn-secondary w-full sm:w-auto">Explore Features</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-light mb-8 sm:mb-12 text-blue text-center">
+                    You want to connect—<span class="italic">but the world wasn't built for introverts</span>
+                </h2>
+                <p class="text-base sm:text-lg mb-8 sm:mb-12 text-center">
+                    In a world that rewards extroversion, your natural introvert tendencies can feel like obstacles rather than strengths.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
+                    <div class="card p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-medium mb-2 sm:mb-4 text-teal">Energy Depletion</h3>
+                        <p>Social interactions drain your energy faster than others realize, leaving you exhausted and unable to be your best self.</p>
+                    </div>
+
+                    <div class="card p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-medium mb-2 sm:mb-4 text-teal">Misunderstood Intentions</h3>
+                        <p>Your preference for deeper conversations and smaller gatherings is often misinterpreted as aloofness or disinterest.</p>
+                    </div>
+
+                    <div class="card p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-medium mb-2 sm:mb-4 text-teal">Social Pressure</h3>
+                        <p>The expectation to participate in high-energy social settings creates anxiety and prevents you from authentic connection.</p>
+                    </div>
+
+                    <div class="card p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-medium mb-2 sm:mb-4 text-teal">Lack of Recovery Time</h3>
+                        <p>Without sufficient solitude to recharge, your creativity diminishes and stress accumulates, affecting all areas of life.</p>
+                    </div>
+                </div>
+
+                <div class="mt-10 sm:mt-16 text-center">
+                    <p class="text-lg sm:text-xl italic mb-6 sm:mb-8 text-gray-700">"You've been trying to adapt to a world that wasn't designed with you in mind."</p>
+                    <a href="#solution" class="btn-primary w-full sm:w-auto">There's a better way</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="py-16 md:py-24 gradient-bg">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-light mb-4 text-blue text-center">
+                    You don't need to change.<br>
+                    <span class="font-normal">You need better tools.</span>
+                </h2>
+
+                <p class="text-lg mb-16 text-center">
+                    IntroSync is built from the ground up with introvert psychology in mind, creating a system that works with your natural tendencies instead of against them.
+                </p>
+
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-16">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-medium mb-4 text-teal">From overwhelm to calm control</h3>
+                        <p class="mb-6">
+                            IntroSync helps you track and manage your social energy, creating boundaries that protect your well-being while still allowing for meaningful connection.
+                        </p>
+
+                        <ul class="mb-8">
+                            <li class="flex items-start mb-4">
+                                <div class="text-teal mr-4 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p>Real-time energy tracking based on introvert psychology</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start mb-4">
+                                <div class="text-teal mr-4 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p>Personalized recharge recommendations that work for you</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-teal mr-4 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p>Smart notifications that protect your boundaries</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-teal rounded-full p-2 mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-teal">Energy Management</h4>
+                                    <h5 class="text-sm text-gray-600">Energy Insight</h5>
+                                </div>
+                            </div>
+                            <p class="mb-6 text-gray-700 italic">
+                                "You have a 2-hour meeting tomorrow. Consider scheduling 30 minutes of solitude before and after to maintain your energy levels."
+                            </p>
+
+                            <div>
+                                <p class="text-sm font-medium text-gray-800 mb-2">Your social energy for today</p>
+                                <div class="flex justify-between space-x-4 mb-2">
+                                    <div class="time-block">
+                                        <div class="energy-level w-16">
+                                            <div class="energy-level-fill" style="width: 90%;"></div>
+                                        </div>
+                                        <span class="time-label">Morning</span>
+                                    </div>
+                                    <div class="time-block">
+                                        <div class="energy-level w-16">
+                                            <div class="energy-level-fill" style="width: 60%;"></div>
+                                        </div>
+                                        <span class="time-label">Midday</span>
+                                    </div>
+                                    <div class="time-block">
+                                        <div class="energy-level w-16">
+                                            <div class="energy-level-fill" style="width: 30%;"></div>
+                                        </div>
+                                        <span class="time-label">Evening</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-medium mb-4 text-blue">From awkward to authentic</h3>
+                        <p class="mb-6">
+                            IntroSync helps you prepare for social interactions, suggesting conversation topics and providing social scripts that align with your personality and interests.
+                        </p>
+
+                        <ul class="mb-8">
+                            <li class="flex items-start mb-4">
+                                <div class="text-blue mr-4 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p>AI-powered conversation starters tailored to your interests</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start mb-4">
+                                <div class="text-blue mr-4 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p>Meeting preparation with personalized strategies</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-blue mr-4 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p>Venue recommendations that match your comfort level</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-gray-50 rounded-lg p-6">
+                                <div class="flex items-center mb-4">
+                                    <div class="bg-green rounded-full p-2 mr-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Coffee with Alex</h4>
+                                        <div class="badge badge-success text-xs mt-1">Perfect Match</div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 mb-2">Thursday, 2:00 PM - Quiet Corner Café</p>
+                                <div class="flex flex-wrap gap-2 text-xs">
+                                    <span class="px-2 py-1 bg-gray-200 rounded-full">1-on-1</span>
+                                    <span class="px-2 py-1 bg-gray-200 rounded-full">Quiet venue</span>
+                                    <span class="px-2 py-1 bg-gray-200 rounded-full">Professional</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-gray-50 rounded-lg p-6">
+                                <div class="flex items-center mb-4">
+                                    <div class="bg-coral rounded-full p-2 mr-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Team Lunch</h4>
+                                        <div class="badge badge-warning text-xs mt-1">Not Recommended</div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 mb-2">Friday, 12:30 PM - Busy Restaurant</p>
+                                <div class="flex flex-wrap gap-2 text-xs">
+                                    <span class="px-2 py-1 bg-gray-200 rounded-full">Group (8+)</span>
+                                    <span class="px-2 py-1 bg-gray-200 rounded-full">Loud venue</span>
+                                    <span class="px-2 py-1 bg-gray-200 rounded-full">Social</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-light mb-6 text-blue">Features Built for Your Introvert Nature</h2>
+                <p class="text-lg">
+                    Every feature in IntroSync is designed with introvert psychology in mind, creating a system that amplifies your strengths.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Energy Tracker -->
+                <div class="feature-card p-6">
+                    <div class="mb-6 text-teal">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-medium mb-4 text-teal">Energy Tracker</h3>
+                    <p class="mb-6">
+                        Monitor your social battery in real-time, with personalized insights on when to engage and when to recharge.
+                    </p>
+                    <ul class="mt-auto">
+                        <li class="flex items-start mb-2">
+                            <div class="text-teal mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm">Daily energy forecasts</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start mb-2">
+                            <div class="text-teal mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm">Personalized recovery recommendations</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="text-teal mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm">Calendar integration</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Connection Planner -->
+                <div class="feature-card p-6">
+                    <div class="mb-6 text-blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-medium mb-4 text-blue">Connection Planner</h3>
+                    <p class="mb-6">
+                        Plan social interactions that align with your energy levels and preferences, with smart recommendations.
+                    </p>
+                    <ul class="mt-auto">
+                        <li class="flex items-start mb-2">
+                            <div class="text-blue mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm">Optimal timing suggestions</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start mb-2">
+                            <div class="text-blue mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm">Introvert-friendly venue database</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="text-blue mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm">Pre-meeting preparation guides</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- SoloTime -->
+                <div class="feature-card p-6">
+                    <div class="mb-6 text-lavender">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-medium mb-4 text-lavender">SoloTime</h3>
+                    <p class="mb-6">
+                        Protect your recharge time with intelligent boundaries, auto-responders, and focus modes.
+                    </p>
+                    <ul class="mt-auto">
+                        <li class="flex items-start mb-2">
+                            <div class="text-lavender mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm">Do-not-disturb automation</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start mb-2">
+                            <div class="text-lavender mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm">Recharge activity suggestions</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="text-lavender mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm">Energy restoration tracking</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Conversation Assistant -->
+                <div class="feature-card p-6">
+                    <div class="mb-6 text-green">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-medium mb-4 text-green">Conversation Assistant</h3>
+                    <p class="mb-6">
+                        Never worry about awkward silences with personalized conversation starters and deep discussion prompts.
+                    </p>
+                    <ul class="mt-auto">
+                        <li class="flex items-start mb-2">
+                            <div class="text-green mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm">AI-generated conversation starters</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start mb-2">
+                            <div class="text-green mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm">Interest-matching for deeper connections</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="text-green mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm">Social script templates</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Meeting Timeout -->
+                <div class="feature-card p-6">
+                    <div class="mb-6 text-coral">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-medium mb-4 text-coral">Meeting Timeout</h3>
+                    <p class="mb-6">
+                        Set intelligent limits on social interactions to prevent energy depletion and burnout.
+                    </p>
+                    <ul class="mt-auto">
+                        <li class="flex items-start mb-2">
+                            <div class="text-coral mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm">Automated meeting duration recommendations</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start mb-2">
+                            <div class="text-coral mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm">Graceful exit strategies</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="text-coral mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm">Virtual meeting protections</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Connection Journal -->
+                <div class="feature-card p-6">
+                    <div class="mb-6 text-sand">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-medium mb-4 text-sand">Connection Journal</h3>
+                    <p class="mb-6">
+                        Track your meaningful connections and reflect on social interactions to improve over time.
+                    </p>
+                    <ul class="mt-auto">
+                        <li class="flex items-start mb-2">
+                            <div class="text-sand mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm">Relationship tracking</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start mb-2">
+                            <div class="text-sand mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm">Interaction quality metrics</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="text-sand mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm">Follow-up reminders</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 md:py-24 gradient-bg">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-light mb-6 text-blue">Stories from Fellow Introverts</h2>
+                <p class="text-lg">
+                    Early users of IntroSync are experiencing meaningful changes in how they navigate their social worlds.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card p-8">
+                    <div class="mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-lavender" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                        </svg>
+                    </div>
+                    <p class="mb-6 text-gray-700 italic">
+                        "IntroSync has completely changed how I approach networking events. I used to dread them, but now I can plan my energy expenditure and have meaningful conversations without the anxiety."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="mr-4">
+                            <div class="w-12 h-12 bg-lavender rounded-full flex items-center justify-center text-white font-semibold">
+                                ST
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Sarah T.</h4>
+                            <p class="text-sm text-gray-600">Product Designer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card p-8">
+                    <div class="mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                        </svg>
+                    </div>
+                    <p class="mb-6 text-gray-700 italic">
+                        "The Connection Planner has been a game-changer for me. I can now have deep, meaningful one-on-one meetings without feeling drained afterward. IntroSync helps me plan my social calendar in a way that works for my introvert nature."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="mr-4">
+                            <div class="w-12 h-12 bg-teal rounded-full flex items-center justify-center text-white font-semibold">
+                                MR
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Michael R.</h4>
+                            <p class="text-sm text-gray-600">Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card p-8">
+                    <div class="mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                        </svg>
+                    </div>
+                    <p class="mb-6 text-gray-700 italic">
+                        "As an introvert in a client-facing role, I was constantly exhausted. IntroSync has helped me set boundaries and manage my energy so I can be fully present for important meetings while still having time to recharge."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="mr-4">
+                            <div class="w-12 h-12 bg-green rounded-full flex items-center justify-center text-white font-semibold">
+                                AK
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Aisha K.</h4>
+                            <p class="text-sm text-gray-600">Marketing Strategist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-light mb-12 text-blue text-center">Frequently Asked Questions</h2>
+
+                <div class="space-y-6">
+                    <div class="accordion-item active">
+                        <div class="accordion-header bg-gray-50 rounded-lg">
+                            <span>When will IntroSync be available?</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="accordion-content max-h-80">
+                            <p class="text-gray-700">
+                                We're currently in closed beta testing with a limited group of users. Join our waitlist to be among the first to access IntroSync when we launch publicly.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header bg-gray-50 rounded-lg">
+                            <span>Is IntroSync only for introverts?</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="text-gray-700">
+                                While IntroSync is specifically designed with introvert psychology in mind, anyone who wants to manage their social energy more effectively can benefit from our platform, including ambiverts and extroverts who experience social fatigue.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header bg-gray-50 rounded-lg">
+                            <span>How does IntroSync protect my privacy?</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="text-gray-700">
+                                We take privacy seriously. IntroSync uses end-to-end encryption for all your personal data, and we never share your information with third parties. You have complete control over what information is stored and used within the app.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header bg-gray-50 rounded-lg">
+                            <span>Can I integrate IntroSync with my existing calendar?</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="text-gray-700">
+                                Yes, IntroSync seamlessly integrates with popular calendar apps like Google Calendar, Outlook, and Apple Calendar. This allows for automatic energy forecasting based on your scheduled events.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist Section -->
+    <section id="waitlist" class="py-16 md:py-24 hero-gradient">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-light mb-4 sm:mb-6 text-blue">Join the IntroSync Community</h2>
+                <p class="text-base sm:text-lg mb-6 sm:mb-8">
+                    Be among the first to experience a social world designed for introverts. Sign up for our waitlist and receive early access when we launch.
+                </p>
+
+                <!-- Placeholder for MailerLite Integration -->
+                <div class="ml-embedded" data-form="JIUnc9"></div>
+                <!-- MailerLite Universal -->
+                <script>
+                    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+                    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+                    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+                    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+                    ml('account', '1435300');
+                </script>
+                <!-- End MailerLite Universal -->
+
+                <!-- Fallback form for when MailerLite doesn't load -->
+                <div class="mt-6 bg-white bg-opacity-50 backdrop-filter backdrop-blur-sm rounded-lg p-4 sm:p-6 mx-auto max-w-md">
+                    <form id="waitlist-form" class="waitlist-form">
+                        <input type="email" id="email" placeholder="Your email address" required>
+                        <button type="submit" class="waitlist-btn">Join Waitlist</button>
+                    </form>
+                    <div id="form-status" class="hidden mt-3 text-sm"></div>
+                    <div class="mt-4 text-xs text-gray-600">
+                        By joining, you'll receive updates about IntroSync and early access opportunities. We respect your privacy and will never share your information.
+                    </div>
+                </div>
+
+                <div class="mt-10 sm:mt-16 flex flex-col items-center">
+                    <div class="flex space-x-4 mb-4 sm:mb-6">
+                        <span class="inline-block w-3 h-3 rounded-full bg-teal"></span>
+                        <span class="inline-block w-3 h-3 rounded-full bg-lavender"></span>
+                        <span class="inline-block w-3 h-3 rounded-full bg-blue"></span>
+                    </div>
+                    <p class="text-gray-600 italic text-sm sm:text-base">
+                        "You don't need to change. You need better tools."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 pt-12 sm:pt-16 pb-8 sm:pb-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
+                    <div class="col-span-2 sm:col-span-2 md:col-span-1 mb-6 sm:mb-0">
+                        <h3 class="text-lg font-semibold mb-3 sm:mb-4 text-teal">IntroSync</h3>
+                        <p class="text-gray-600 mb-4 text-sm sm:text-base">
+                            Helping introverts navigate social worlds with confidence, on their own terms.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="social-icon" aria-label="X (Twitter)">
+                                <div class="x-logo"></div>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="YouTube">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="TikTok">
+                                <div class="tiktok-logo"></div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 sm:mb-4 text-gray-800">Features</h3>
+                        <ul class="space-y-2 text-gray-600 text-sm sm:text-base">
+                            <li><a href="#features" class="hover:text-teal transition block py-1">Energy Tracker</a></li>
+                            <li><a href="#features" class="hover:text-teal transition block py-1">Connection Planner</a></li>
+                            <li><a href="#features" class="hover:text-teal transition block py-1">SoloTime</a></li>
+                            <li><a href="#features" class="hover:text-teal transition block py-1">Conversation Assistant</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 sm:mb-4 text-gray-800">Company</h3>
+                        <ul class="space-y-2 text-gray-600 text-sm sm:text-base">
+                            <li><a href="#" class="hover:text-teal transition block py-1">About Us</a></li>
+                            <li><a href="#" class="hover:text-teal transition block py-1">Blog</a></li>
+                            <li><a href="#testimonials" class="hover:text-teal transition block py-1">Success Stories</a></li>
+                            <li><a href="#" class="hover:text-teal transition block py-1">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 sm:mb-4 text-gray-800">Resources</h3>
+                        <ul class="space-y-2 text-gray-600 text-sm sm:text-base">
+                            <li><a href="#" class="hover:text-teal transition block py-1">Introvert's Guide</a></li>
+                            <li><a href="#" class="hover:text-teal transition block py-1">Social Energy Tips</a></li>
+                            <li><a href="#faq" class="hover:text-teal transition block py-1">FAQ</a></li>
+                            <li><a href="#" class="hover:text-teal transition block py-1">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-200 pt-6 sm:pt-8">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <p class="text-gray-600 text-sm mb-4 md:mb-0 text-center md:text-left">
+                            &copy; 2023 IntroSync. All rights reserved.
+                        </p>
+                        <div class="flex flex-wrap justify-center md:justify-end gap-4 sm:gap-6 text-sm text-gray-600">
+                            <a href="#" class="hover:text-teal transition">Terms of Service</a>
+                            <a href="#" class="hover:text-teal transition">Privacy Policy</a>
+                            <a href="#" class="hover:text-teal transition">Cookies</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    // Change button icon when menu is open
+                    const isOpen = !mobileMenu.classList.contains('hidden');
+                    if (isOpen) {
+                        mobileMenuButton.innerHTML = `
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        `;
+                    } else {
+                        mobileMenuButton.innerHTML = `
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        `;
+                    }
+                });
+
+                // Close mobile menu when clicking on a link
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuButton.innerHTML = `
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        `;
+                    });
+                });
+            }
+
+            // Accordion functionality
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const item = header.parentElement;
+                    const isActive = item.classList.contains('active');
+
+                    // Close all accordion items
+                    document.querySelectorAll('.accordion-item').forEach(accordionItem => {
+                        accordionItem.classList.remove('active');
+                        const icon = accordionItem.querySelector('svg');
+                        icon.innerHTML = '<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />';
+                    });
+
+                    // Open the clicked item if it was closed
+                    if (!isActive) {
+                        item.classList.add('active');
+                        const icon = header.querySelector('svg');
+                        icon.innerHTML = '<path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />';
+                    }
+                });
+            });
+
+            // Form submission
+            const waitlistForm = document.getElementById('waitlist-form');
+            const formStatus = document.getElementById('form-status');
+
+            if (waitlistForm) {
+                waitlistForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    const email = document.getElementById('email').value;
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                    if (!emailRegex.test(email)) {
+                        formStatus.textContent = 'Please enter a valid email address.';
+                        formStatus.className = 'mt-3 text-sm text-red-500';
+                        formStatus.classList.remove('hidden');
+                        return;
+                    }
+
+                    // Simulate form submission
+                    const submitButton = waitlistForm.querySelector('button');
+                    const originalText = submitButton.textContent;
+                    submitButton.textContent = 'Adding you...';
+                    submitButton.disabled = true;
+
+                    setTimeout(() => {
+                        formStatus.textContent = 'Thank you for joining our waitlist! Please check your email to confirm your subscription.';
+                        formStatus.className = 'mt-3 text-sm text-green-600';
+                        formStatus.classList.remove('hidden');
+                        waitlistForm.reset();
+                        submitButton.textContent = originalText;
+                        submitButton.disabled = false;
+                    }, 1500);
+                });
+            }
+
+            // Smooth scrolling for anchor links with mobile menu handling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        // Close mobile menu if open
+                        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                            if (mobileMenuButton) {
+                                mobileMenuButton.innerHTML = `
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                                    </svg>
+                                `;
+                            }
+                        }
+
+                        // Add a small delay for mobile menu to close
+                        setTimeout(() => {
+                            window.scrollTo({
+                                top: target.offsetTop - 80, // Adjust for header height
+                                behavior: 'smooth'
+                            });
+                        }, 100);
+                    }
+                });
+            });
+
+            // Add touch feedback for mobile
+            const touchElements = document.querySelectorAll('button, .btn-primary, .btn-secondary, .card, .feature-card, .testimonial-card');
+            touchElements.forEach(element => {
+                element.addEventListener('touchstart', function() {
+                    this.style.opacity = '0.8';
+                });
+                element.addEventListener('touchend', function() {
+                    this.style.opacity = '1';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
